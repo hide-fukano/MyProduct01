@@ -12,3 +12,7 @@ class Post(models.Model):
     def __str__(self):
         # titleの文字列を返す
         return self.title
+
+    # 先頭から100文字分だけ文章だけを返す
+    def summary(self):
+        return self.body[:100]
